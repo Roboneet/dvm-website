@@ -54,6 +54,7 @@ hr {
 }
 .section-header {
   margin-bottom: 50px;
+  font-family: 'Coves', sans-serif;
 }
 .section-header .section-title {
   font-size: 44px;
@@ -168,7 +169,7 @@ ul.nostyle i {
 }
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
@@ -228,6 +229,7 @@ ul.nostyle i {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+  background-attachment: fixed;
 }
 #main-slider .slider-inner {
   position: absolute;
@@ -616,6 +618,99 @@ ul.nostyle i {
   color: #fff;
   background: #222534;
   border-radius: 3px;
+}
+#achivements{
+  background: #beced6;
+  padding: 100px 0;
+}
+#achivements .section-header .section-title{
+  font-family: 'Bebas';
+}
+#achivements .timeline{
+  position: relative;
+  margin: 0 auto;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEElEQVQIW2NMTEz8z8gABAAPKwIlXWq1kgAAAABJRU5ErkJggg==) 50% 0 repeat-y;
+}
+#achivements .block{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  position: relative;
+}
+#achivements .image{
+  width: 50%;
+  text-align: right;
+  padding: 0 10px;
+}
+#achivements .image img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 2px;
+  border: 1px solid transparent;
+  transition: all .5s linear;
+}
+#achivements .block:hover .image img{
+  border-color: #64686d;
+}
+#achivements .content{
+  display: inline-block;
+  width: 50%;
+  margin-left: 50px;
+}
+#achivements .block::after{
+  content: '';
+  width: 0;
+  height: 0;
+  font: 0/0 a;
+  top: 10px;
+  border: 4px solid #4d5156;
+  border-radius: 50%;
+  position: absolute;
+  
+  left: calc(50% - 4px);
+}
+#achivements .content .main{
+  font-size: 2em;
+}
+#achivements .content .details{
+  font-size: 1em;
+}
+#achivements .block:nth-of-type(2n){
+  flex-direction: row-reverse;
+}
+#achivements .block:nth-of-type(2n) .content{
+  text-align: right;
+  margin-left: 0;
+  margin-right: 50px;
+}
+#achivements .block:nth-of-type(2n) .image{
+  text-align: left;
+
+}
+@media only screen and (max-width:768px){
+  #achivements .timeline{
+    background-position: 0% 0%;
+  }
+  #achivements .block::after{
+    left: -4px;
+  }
+  #achivements .image{
+    display: none;
+  }
+  #achivements .block:nth-of-type(2n) .content{
+    text-align: left !important;
+    margin-left: 50px;
+    margin-right: 0;
+  }
+  #achivements .block:nth-of-type(2n){
+    flex-direction: row;
+  }
+  #achivements .content{
+    width: 100%;
+  }
 }
 #alumni {
   padding: 100px 0;
